@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    color-scheme: light;
+}
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:#f8f8fc;
+}
+
+/* ================= SHARED SPINNER ================= */
+
+.ss-spinner-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ss-spinner {
+    display: inline-block;
+    border-radius: 50%;
+    border: 3px solid rgba(108, 61, 244, 0.2);
+    border-top-color: #6c3df4;
+    animation: ss-spin 0.7s linear infinite;
+}
+
+.ss-spinner-label {
+    color: #666;
+    font-size: 14px;
+}
+
+@keyframes ss-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.ss-page-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    gap: 12px;
+}

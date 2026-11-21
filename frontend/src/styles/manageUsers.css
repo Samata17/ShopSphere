@@ -1,0 +1,511 @@
+/* =========================================================
+   MANAGE USERS
+========================================================= */
+
+.manage-users-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f7f7fb;
+  color: #242430;
+}
+
+.manage-users-main {
+  width: calc(100% - 260px);
+  margin-left: 260px;
+  min-height: 100vh;
+  padding: 36px;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.manage-users-header {
+  margin-bottom: 28px;
+}
+
+.manage-users-header h1 {
+  margin: 0 0 7px;
+  font-size: 30px;
+}
+
+.manage-users-header > div > p:last-child {
+  margin: 0;
+  color: #7d7d88;
+  font-size: 14px;
+}
+
+/* =========================================================
+   SUMMARY CARDS
+========================================================= */
+
+.user-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.user-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #ffffff;
+  border: 1px solid #ececf3;
+  border-radius: 14px;
+  padding: 19px;
+  box-shadow: 0 5px 18px rgba(20, 20, 40, 0.04);
+}
+
+.user-summary-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: #f0ebff;
+  color: #6240d3;
+  font-size: 18px;
+}
+
+.user-summary-card > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.user-summary-card span {
+  color: #858590;
+  font-size: 11px;
+}
+
+.user-summary-card strong {
+  font-size: 22px;
+}
+
+/* =========================================================
+   MANAGEMENT CARD
+========================================================= */
+
+.users-management-card {
+  background: #ffffff;
+  border: 1px solid #ececf3;
+  border-radius: 15px;
+  box-shadow: 0 5px 18px rgba(20, 20, 40, 0.04);
+  overflow: hidden;
+}
+
+.users-card-header {
+  padding: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.users-card-header h2 {
+  margin: 0 0 5px;
+  font-size: 18px;
+}
+
+.users-card-header p {
+  margin: 0;
+  color: #92929d;
+  font-size: 12px;
+}
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.users-search-box {
+  width: 310px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 13px;
+  border: 1px solid #dedee7;
+  border-radius: 9px;
+  background: #ffffff;
+}
+
+.users-search-box svg {
+  color: #9b9ba5;
+}
+
+.users-search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 12px;
+}
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.users-tabs {
+  display: flex;
+  gap: 6px;
+  padding: 0 23px 17px;
+  border-bottom: 1px solid #ededf3;
+}
+
+.users-tabs button {
+  border: none;
+  background: transparent;
+  padding: 9px 13px;
+  border-radius: 8px;
+  color: #777783;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.users-tabs button span {
+  margin-left: 7px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  background: #eeeeF4;
+  font-size: 10px;
+}
+
+.users-tabs button.active {
+  background: #eee9ff;
+  color: #603bd3;
+}
+
+.users-tabs button.active span {
+  background: #ffffff;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.users-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.users-table th {
+  padding: 14px 18px;
+  background: #fafafe;
+  color: #777783;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.users-table td {
+  padding: 16px 18px;
+  border-top: 1px solid #f0f0f4;
+  vertical-align: middle;
+  font-size: 12px;
+}
+
+.users-table tbody tr:hover {
+  background: #fcfbff;
+}
+
+/* =========================================================
+   USER
+========================================================= */
+
+.table-user {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 180px;
+}
+
+.table-user-avatar {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee9ff;
+  color: #603bd3;
+}
+
+.table-user-avatar.seller {
+  background: #e9f5ff;
+  color: #2879c9;
+}
+
+.table-user > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.table-user strong {
+  font-size: 12px;
+}
+
+.table-user span {
+  color: #9999a3;
+  font-size: 10px;
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.user-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.user-contact strong {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.user-contact span {
+  color: #9696a0;
+  font-size: 10px;
+}
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.user-role-badge,
+.user-status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 9px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.user-role-badge.customer {
+  background: #eee9ff;
+  color: #603bd3;
+}
+
+.user-role-badge.seller {
+  background: #e9f5ff;
+  color: #2879c9;
+}
+
+.user-status-badge.active {
+  background: #e9f8ef;
+  color: #279657;
+}
+
+.user-status-badge.inactive {
+  background: #fff0f0;
+  color: #d34c4c;
+}
+
+.joined-date {
+  color: #777783;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.user-action-btn {
+  width: 33px;
+  height: 33px;
+  border: 1px solid #e1e1e8;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #656570;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.user-action-btn:hover {
+  border-color: #bcaef1;
+  color: #603bd3;
+  background: #f7f4ff;
+}
+
+.user-action-btn.deactivate:hover {
+  border-color: #f0baba;
+  color: #d34c4c;
+  background: #fff4f4;
+}
+
+.user-action-btn.activate:hover {
+  border-color: #a9dfbd;
+  color: #279657;
+  background: #effaf3;
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.no-users {
+  height: 230px;
+  text-align: center;
+  color: #9696a0;
+}
+
+.no-users svg {
+  display: block;
+  margin: 0 auto 10px;
+  font-size: 27px;
+  color: #c5b9ed;
+}
+
+.no-users strong {
+  display: block;
+  color: #44444e;
+  margin-bottom: 5px;
+}
+
+.no-users span {
+  font-size: 11px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+  .user-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .users-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .users-search-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  .manage-users-main {
+    width: calc(100% - 75px);
+    margin-left: 75px;
+    padding: 24px 18px;
+  }
+
+  .user-summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .manage-users-main {
+    padding: 20px 12px;
+  }
+
+  .manage-users-header h1 {
+    font-size: 24px;
+  }
+
+  .users-tabs {
+    overflow-x: auto;
+  }
+
+  .users-tabs button {
+    white-space: nowrap;
+  }
+}
+/* =========================================================
+   FONT SIZE IMPROVEMENTS
+========================================================= */
+
+.manage-users-header h1 {
+  font-size: 34px;
+}
+
+.manage-users-header > div > p:last-child {
+  font-size: 16px;
+}
+
+.user-summary-card span {
+  font-size: 13px;
+}
+
+.user-summary-card strong {
+  font-size: 26px;
+}
+
+.users-card-header h2 {
+  font-size: 21px;
+}
+
+.users-card-header p {
+  font-size: 14px;
+}
+
+.users-search-box input {
+  font-size: 14px;
+}
+
+.users-tabs button {
+  font-size: 14px;
+}
+
+.users-tabs button span {
+  font-size: 12px;
+}
+
+.users-table th {
+  font-size: 13px;
+}
+
+.users-table td {
+  font-size: 14px;
+}
+
+.table-user strong {
+  font-size: 14px;
+}
+
+.table-user span {
+  font-size: 12px;
+}
+
+.user-contact strong {
+  font-size: 13px;
+}
+
+.user-contact span {
+  font-size: 12px;
+}
+
+.user-role-badge,
+.user-status-badge {
+  font-size: 12px;
+}
+
+.joined-date {
+  font-size: 13px;
+}

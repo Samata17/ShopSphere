@@ -1,0 +1,60 @@
+/* =========================
+   DEALS PAGE
+========================= */
+
+.deals-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 55px 30px 80px;
+}
+
+.deals-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.deal-label {
+  display: inline-block;
+
+  margin-bottom: 10px;
+  padding: 6px 12px;
+
+  background: #f1edff;
+  color: #7045e7;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.deals-heading h1 {
+  margin: 0 0 8px;
+
+  color: #252238;
+  font-size: 34px;
+  font-weight: 750;
+}
+
+.deals-heading p {
+  margin: 0;
+
+  color: #888;
+  font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+  .deals-page {
+    padding: 40px 20px 60px;
+  }
+
+  .deals-heading h1 {
+    font-size: 28px;
+  }
+}
